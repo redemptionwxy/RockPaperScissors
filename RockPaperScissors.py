@@ -31,7 +31,7 @@ while 1:
 
 	print("You picked %s and Computer picked %s"%(yo,co))
 
-	print("************************************")
+	print("*"*50)
 	print()
 
 	if a == 3 and c == 2 or a != 3 and a > c and a <= 3 or a == 1 and c == 3:
