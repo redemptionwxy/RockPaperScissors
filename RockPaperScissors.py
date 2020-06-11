@@ -47,7 +47,7 @@ while 1:
 		print("That is the bug you want @ _ @")
 
 	print()
-	print("************************************")
+	print("*"*50)
 
 
 	print("Win %d times"%w)
