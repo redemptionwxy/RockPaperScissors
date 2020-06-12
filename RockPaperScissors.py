@@ -9,8 +9,12 @@ while 1:
 	R += 1
 	print("Round %d"%R)
 	k = input("Rock: 1, Paper: 2, Scissors: 3. Make Your Choice:")
-	a = int(k)
-	c = random.randint(1,3)
+	if k.isdigit() and float(k) >= 1 and float(k) <= 3:
+		a = int(k)
+		c = random.randint(1,3)
+	else:
+		print("Please type a integer number between 1 to 3!\n")
+		continue
 
 
 	if a == 1:
@@ -19,8 +23,7 @@ while 1:
 		yo = "Paper"
 	elif a == 3:
 		yo = "Scissors"
-	else:
-		yo = "A Bug"
+
 
 	if c == 1: 
 		co = "Rock"
@@ -32,30 +35,25 @@ while 1:
 	print("You picked %s and Computer picked %s"%(yo,co))
 
 	print("*"*50)
-	print()
 
 	if a == 3 and c == 2 or a != 3 and a > c and a <= 3 or a == 1 and c == 3:
-		print("You Win!")
+		print("\nYou Win!\n")
 		w += 1
 	elif a == 1 and c == 2 or a != 1 and a < c and a >= 0 or a == 3 and c == 1:
-		print("You Lose!")
+		print("\nYou Lose!\n")
 		l += 1
 	elif a == c:
-		print("Draw!")
+		print("\nDraw!\n")
 		d += 1
-	else:
-		print("That is the bug you want @ _ @")
 
-	print()
 	print("*"*50)
 
 
-	print("Win %d times"%w)
+	print("Win  %d times"%w)
 	print("Lose %d times"%l)
-	print("Draw %d times"%d)
-	print()
+	print("Draw %d times\n"%d)
+
 
 	# print("Continue or Press d to Exit")
 	# if ord(msvcrt.getch()) == 68:
 	# 	break
-
